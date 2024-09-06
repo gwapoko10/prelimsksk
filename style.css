@@ -1,0 +1,504 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.wwapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.navbar {
+  width: 86%;
+  display: flex;
+  margin: auto;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  margin-top: -1%;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 16px;
+}
+
+ul li a {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: -3%;
+  transition: color 0.3s ease;
+}
+.navbar ul li a:hover {
+  color: #0a07be;
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.picnote {
+  display: block;
+  border-radius: 100%;
+  margin-top: 100px;
+  width: 35%;
+}
+
+.ambot {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 510px;
+  padding: 20px 20px;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.5;
+  border-radius: 0px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #cbe5fe;
+}
+
+.ambot-text {
+  font-size: 18px;
+  line-height: 1.9;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  max-width: 90%;
+}
+
+.sign-in-button {
+  font-size: 13px;
+  padding: 15px 75px;
+  background-color: #1ea370;
+  color: white;
+  margin-top: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.sign-in-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.w1 {
+  color: black;
+  margin-top: -450px;
+  margin-bottom: 50px;
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.w2 {
+  color: white;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.w3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.w4 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sidebar {
+  background-color: rgb(0, 181, 148);
+  width: 250px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.sidebar-container {
+  display: flex;
+  position: fixed;
+  z-index: 2;
+}
+
+.sidebar .button,
+.sidebar .button-current {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: rgb(212, 212, 212);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  background-color: transparent;
+  border: none;
+}
+
+.sidebar .button:hover {
+  background-color: rgb(4, 165, 136);
+}
+
+.sidebar .button-current {
+  background-color: rgb(4, 165, 136);
+}
+
+.sidebar i {
+  font-size: 22px;
+  color: rgb(212, 212, 212);
+}
+
+.sidebar .user {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  bottom: 3%;
+  left: 8%;
+  line-height: 17px;
+}
+
+.wrapper .sidebar-container .sidebar .user span {
+  margin-left: 30%;
+}
+
+.sidebar .user .userpng {
+  width: 55px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 1em;
+}
+
+.navbar-note {
+  background-color: white;
+  width: 1173px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 10px;
+  position: fixed;
+  left: 250px;
+}
+
+.green-line {
+  background-color: rgb(0, 181, 148);
+  content: '';
+  height: 4px;
+  width: 120px;
+  position: absolute;
+  left: 20px;
+  bottom: 22px;
+}
+
+.navbar-note h1 {
+  margin-left: -20px;
+}
+
+.forms {
+  --input-text-color: black;
+  --input-bg-color: white;
+  --focus-input-bg-color: transparent;
+  --text-color: #949faa;
+  --active-color: rgb(0, 181, 148);
+  --width-of-input: 250px;
+  --inline-padding-of-input: 1.2em;
+  --gap: 0.9rem;
+}
+
+.forms {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: var(--width-of-input);
+  position: relative;
+  isolation: isolate;
+  margin-left: 180px;
+}
+
+.fancy-bg {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  background: white;
+  border-radius: 30px;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.forms label {
+  width: 100%;
+  padding: 0.8em;
+  height: 40px;
+  padding-inline: var(--inline-padding-of-input);
+  display: flex;
+  align-items: center;
+}
+
+.search,
+.close-btn {
+  position: absolute;
+}
+
+.search {
+  fill: var(--text-color);
+  left: var(--inline-padding-of-input);
+}
+
+svg {
+  width: 17px;
+  display: block;
+}
+
+.close-btn {
+  border: none;
+  right: var(--inline-padding-of-input);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0.1em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--active-color);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.input {
+  color: var(--input-text-color);
+  width: 100%;
+  margin-inline: min(2em, calc(var(--inline-padding-of-input) + var(--gap)));
+  background: none;
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--text-color);
+}
+
+.input:focus ~ .fancy-bg {
+  border: 1px solid var(--active-color);
+  background: var(--focus-input-bg-color);
+}
+
+.input:focus ~ .search {
+  fill: var(--active-color);
+}
+
+.input:valid ~ .close-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: 'color 9999s ease-out, background-color 9999s ease-out';
+  -webkit-transition-delay: 9999s;
+}
+
+.navbar-note h1 {
+  margin-right: 400px;
+}
+
+.add-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+}
+
+.add-container .bx-plus {
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.add-container .add-note {
+  font-weight: 700;
+}
+
+.notes-container {
+  background-color: white;
+  display: grid;
+  left: 250px;
+  padding: 30px;
+  grid-template-columns: repeat(4, 400px);
+  gap: 10px;
+  width: 1700px;
+  position: absolute;
+  height: 845px;
+  bottom: 0;
+  top: 100px;
+}
+
+.notes-container .notes {
+  width: 380px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 15px;
+  position: relative;
+  border: 1px solid rgb(197, 197, 197);
+}
+
+.numberNotes {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.sample1 {
+  margin-bottom: 30px;
+}
+
+.sample2 {
+  margin-bottom: 10px;
+}
+
+.bxs-circle {
+  position: absolute;
+  bottom: 5%;
+  color: rgb(234, 168, 0);
+  font-size: 25px;
+}
+
+.notes-container .notes .date {
+  position: absolute;
+  bottom: 5%;
+  right: 8%;
+  color: grey;
+}
+
+.login-menu {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: -1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 100px;
+  width: 450px;
+  border-radius: 20px;
+}
+
+.inputForm {
+  border: 1.5px solid rgb(199, 199, 199);
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10;
+  transition: 0.2s ease-in-out;
+}
+
+.input {
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 85%;
+  height: 100%;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.inputForm:focus-within {
+  border: 1.5px solid rgb(0, 181, 148);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #2d79f3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-submit {
+  margin: 30px 0 10px 0;
+  background-color: rgb(0, 181, 148);
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.button-submit:hover {
+  background-color: rgb(2, 134, 110);
+}
+
+.login-logo {
+  width: 200px;
+  margin-left: 96px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
